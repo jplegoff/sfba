@@ -1,0 +1,30 @@
+#################
+## Eclipse
+#################
+
+.project
+.metadata
+*.iml
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+.classpath
+.settings/
+
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+
+# Mac crap
+.DS_Store
+
+target/
