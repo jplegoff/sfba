@@ -94,18 +94,18 @@ angular.module('restlet.sfbaapi', [])
        * @param config - Object describing the request to be made and how it should be processed. The object has following properties:
        * @param config.params - Map of strings or objects which will be serialized with the paramSerializer and appended as query parameters.
        {
-         "target" : "",
-         "$page" : "Number of the page to retrieve. Integer value.",
-         "comment" : "",
-         "shopLink" : "",
-         "pictureLink" : "",
-         "id" : "",
-         "price" : "",
-         "dealLink" : "",
-         "$size" : "Size of the page to retrieve. Integer value",
          "$sort" : "Order in which to retrieve the results. Multiple sort criteria can be passed. Example: sort=age ASC,height DESC",
-         "name" : "",
-         "description" : ""
+         "pictureLink" : "Allows to filter the collections of result by the value of field pictureLink",
+         "price" : "Allows to filter the collections of result by the value of field price",
+         "$page" : "Number of the page to retrieve. Integer value.",
+         "target" : "Allows to filter the collections of result by the value of field target",
+         "$size" : "Size of the page to retrieve. Integer value",
+         "name" : "Allows to filter the collections of result by the value of field name",
+         "id" : "Allows to filter the collections of result by the value of field id",
+         "description" : "Allows to filter the collections of result by the value of field description",
+         "dealLink" : "Allows to filter the collections of result by the value of field dealLink",
+         "comment" : "Allows to filter the collections of result by the value of field comment",
+         "shopLink" : "Allows to filter the collections of result by the value of field shopLink"
        }
        * @param config.headers - Map of strings or functions which return strings representing HTTP headers to send to the server.
        *
@@ -130,48 +130,6 @@ angular.module('restlet.sfbaapi', [])
         var url = endpoint + '/items/';
 
         return send('GET', url, config);
-      };
-
-      /**
-       * Adds a item
-       *
-       * @param body - the item payload with the following structure:
-       *
-       {
-         "comment" : "sample comment",
-         "dealLink" : "sample dealLink",
-         "description" : "sample description",
-         "id" : "sample id",
-         "name" : "sample name",
-         "pictureLink" : "sample pictureLink",
-         "price" : "sample price",
-         "shopLink" : "sample shopLink",
-         "target" : "sample target"
-       }
-       *
-       * @param config - Object describing the request to be made and how it should be processed. The object has following properties:
-       * @param config.params - Map of strings or objects which will be serialized with the paramSerializer and appended as query parameters.
-       * @param config.headers - Map of strings or functions which return strings representing HTTP headers to send to the server.
-       *
-       * @returns {HttpPromise} - a promise resolved with the response from the server.
-       * In case of success (status in the 2XX range)
-       *   * Status code : 200 - Payload :
-         {
-           "comment" : "sample comment",
-           "dealLink" : "sample dealLink",
-           "description" : "sample description",
-           "id" : "sample id",
-           "name" : "sample name",
-           "pictureLink" : "sample pictureLink",
-           "price" : "sample price",
-           "shopLink" : "sample shopLink",
-           "target" : "sample target"
-         }
-       */
-      sfbaapi.postItemList = function (body, config) {
-        var url = endpoint + '/items/';
-
-        return send('POST', url, config, body);
       };
 
       /**
@@ -205,74 +163,6 @@ angular.module('restlet.sfbaapi', [])
         var url = endpoint + '/items/' + itemid + '';
 
         return send('GET', url, config);
-      };
-
-      /**
-       * Stores a item
-       *
-       * @param itemid - REQUIRED - Identifier of the item
-       * @param body - the item payload with the following structure:
-       *
-       {
-         "comment" : "sample comment",
-         "dealLink" : "sample dealLink",
-         "description" : "sample description",
-         "id" : "sample id",
-         "name" : "sample name",
-         "pictureLink" : "sample pictureLink",
-         "price" : "sample price",
-         "shopLink" : "sample shopLink",
-         "target" : "sample target"
-       }
-       *
-       * @param config - Object describing the request to be made and how it should be processed. The object has following properties:
-       * @param config.params - Map of strings or objects which will be serialized with the paramSerializer and appended as query parameters.
-       * @param config.headers - Map of strings or functions which return strings representing HTTP headers to send to the server.
-       *
-       * @throws will throw an error if a required parameter is not set
-       *
-       * @returns {HttpPromise} - a promise resolved with the response from the server.
-       * In case of success (status in the 2XX range)
-       *   * Status code : 200 - Payload :
-         {
-           "comment" : "sample comment",
-           "dealLink" : "sample dealLink",
-           "description" : "sample description",
-           "id" : "sample id",
-           "name" : "sample name",
-           "pictureLink" : "sample pictureLink",
-           "price" : "sample price",
-           "shopLink" : "sample shopLink",
-           "target" : "sample target"
-         }
-       */
-      sfbaapi.putItem = function (itemid, body, config) {
-        checkPathVariables(itemid, 'itemid');
-
-        var url = endpoint + '/items/' + itemid + '';
-
-        return send('PUT', url, config, body);
-      };
-
-      /**
-       * Deletes a item
-       *
-       * @param itemid - REQUIRED - Identifier of the item
-       * @param config - Object describing the request to be made and how it should be processed. The object has following properties:
-       * @param config.params - Map of strings or objects which will be serialized with the paramSerializer and appended as query parameters.
-       * @param config.headers - Map of strings or functions which return strings representing HTTP headers to send to the server.
-       *
-       * @throws will throw an error if a required parameter is not set
-       *
-       * @returns {HttpPromise} - a promise resolved with the response from the server.
-       * In case of success (status in the 2XX range)
-       */
-      sfbaapi.deleteItem = function (itemid, config) {
-        checkPathVariables(itemid, 'itemid');
-
-        var url = endpoint + '/items/' + itemid + '';
-
-        return send('DELETE', url, config);
       };
 
       return sfbaapi;
