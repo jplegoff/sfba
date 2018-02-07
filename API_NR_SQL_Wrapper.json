@@ -1,0 +1,315 @@
+{
+  "front-version": "2.13.2",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Project",
+      "description": "",
+      "id": "534362a7-9a18-480a-8989-5b705464cb48",
+      "importedFrom": "d457cedd-b247-4049-bf13-d759c0cd09d3",
+      "lastModified": "2018-01-25T16:25:00.051+01:00",
+      "name": "API NR SQL Wrapper",
+      "remoteModification": "2017-11-08T08:21:13.288Z"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "",
+        "name": "post"
+      },
+      "body": {
+        "bodyType": "Text",
+        "textBody": "{\"patate\":\"sample patate\",\"buildingId\":1,\"parcelId\":1,\"inspectionId\":1,\"inspectionAddress\":\"sample inspectionAddress\",\"inspectionUnitNumber\":\"sample inspectionUnitNumber\",\"inspectionCity\":\"sample inspectionCity\",\"inspectionState\":\"sample inspectionState\",\"inspectionAgency\":\"sample inspectionAgency\",\"agencyJurisdiction\":\"sample agencyJurisdiction\",\"inspectionType\":\"sample inspectionType\",\"inspectionDate\":123456789,\"inspectionRating\":1,\"inspectionScore\":\"sample inspectionScore\"}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "https",
+          "version": "V11"
+        },
+        "path": "apinrsqlwrapper.preprod.rest-let.net/v1/inspections/"
+      },
+      "description": "Adds a Inspection",
+      "id": "5943bfd2-d999-4301-ae00-95c5380b0fe3",
+      "lastModified": "2018-01-25T16:25:00.057+01:00",
+      "name": "POST /inspections/",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/x-yaml"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/xml"
+        },
+        {
+          "name": "Content-Type",
+          "value": "text/xml"
+        },
+        {
+          "enabled": true,
+          "name": "Accept",
+          "value": "application/json, application/x-yaml, application/xml, text/xml"
+        },
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Basic NTJlMzlmZDctNDNiYi00Mzk4LWI0NGYtNTEyYjVkNDU0YzgwOmM0MGJlNTdkLWQzMmEtNGI1NS1iYTQ1LWQzYzhlMzk5MzdlZQ=="
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109779155907688253084"
+      },
+      "parentId": "534362a7-9a18-480a-8989-5b705464cb48"
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "",
+        "name": "get"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "name": "inspectionAddress",
+              "value": "sample inspectionAddress"
+            },
+            {
+              "name": "$size",
+              "value": "2"
+            },
+            {
+              "name": "inspectionUnitNumber",
+              "value": "sample inspectionUnitNumber"
+            },
+            {
+              "name": "$page",
+              "value": "sample $page"
+            },
+            {
+              "enabled": true,
+              "name": "$sort",
+              "value": "patate DESC"
+            },
+            {
+              "name": "inspectionScore",
+              "value": "sample inspectionScore"
+            },
+            {
+              "name": "inspectionRating",
+              "value": "sample inspectionRating"
+            },
+            {
+              "name": "inspectionCity",
+              "value": "sample inspectionCity"
+            },
+            {
+              "name": "inspectionState",
+              "value": "sample inspectionState"
+            },
+            {
+              "name": "inspectionType",
+              "value": "sample inspectionType"
+            },
+            {
+              "name": "patate",
+              "value": "sample patate"
+            },
+            {
+              "name": "inspectionId",
+              "value": "sample inspectionId"
+            },
+            {
+              "name": "agencyJurisdiction",
+              "value": "sample agencyJurisdiction"
+            },
+            {
+              "name": "inspectionAgency",
+              "value": "sample inspectionAgency"
+            },
+            {
+              "name": "buildingId",
+              "value": "sample buildingId"
+            },
+            {
+              "name": "parcelId",
+              "value": "sample parcelId"
+            },
+            {
+              "name": "inspectionDate",
+              "value": "sample inspectionDate"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "https",
+          "version": "V11"
+        },
+        "path": "apinrsqlwrapper.preprod.rest-let.net/v1/inspections/"
+      },
+      "description": "Loads a list of Inspection",
+      "id": "7cb7512a-0f2d-4bb6-977a-ff982ad7b4ef",
+      "lastModified": "2018-01-25T16:25:00.057+01:00",
+      "name": "GET /inspections/",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Accept",
+          "value": "application/json, application/x-yaml, application/xml, text/xml"
+        },
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Basic NTJlMzlmZDctNDNiYi00Mzk4LWI0NGYtNTEyYjVkNDU0YzgwOmM0MGJlNTdkLWQzMmEtNGI1NS1iYTQ1LWQzYzhlMzk5MzdlZQ=="
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109779155907688253084"
+      },
+      "parentId": "534362a7-9a18-480a-8989-5b705464cb48"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "",
+        "name": "delete"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "https",
+          "version": "V11"
+        },
+        "path": "apinrsqlwrapper.preprod.rest-let.net/v1/inspections/{inspectionid}"
+      },
+      "description": "Deletes a Inspection",
+      "id": "80f080de-b524-48e0-9a94-143dc4b0e4ea",
+      "lastModified": "2018-01-25T16:25:00.057+01:00",
+      "name": "DELETE /inspections/{inspectionid}",
+      "headers": [],
+      "parentId": "534362a7-9a18-480a-8989-5b705464cb48"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "",
+        "name": "get"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "apinrsqlwrapper.preprod.rest-let.net",
+        "path": "/v1/inspections/95"
+      },
+      "description": "Loads a Inspection",
+      "id": "a7f1331c-cdcd-44b9-b186-4342725fc448",
+      "lastModified": "2018-01-25T16:25:00.057+01:00",
+      "name": "GET /inspections/{inspectionid}",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Accept",
+          "value": "application/json, application/x-yaml, application/xml, text/xml"
+        },
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Basic NTJlMzlmZDctNDNiYi00Mzk4LWI0NGYtNTEyYjVkNDU0YzgwOmM0MGJlNTdkLWQzMmEtNGI1NS1iYTQ1LWQzYzhlMzk5MzdlZQ=="
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109779155907688253084"
+      },
+      "parentId": "534362a7-9a18-480a-8989-5b705464cb48"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "",
+        "name": "put"
+      },
+      "body": {
+        "bodyType": "Text",
+        "textBody": "{\"patate\":\"95\",\"buildingId\":44300,\"parcelId\":345001,\"inspectionId\":147781,\"inspectionAddress\":\"161 LEAVENWORTH St\",\"inspectionUnitNumber\":\"\",\"inspectionCity\":\"San Francisco\",\"inspectionState\":\"CA\",\"inspectionAgency\":\"Health\",\"agencyJurisdiction\":\"County\",\"inspectionType\":\"Routine\",\"inspectionDate\":\"2008-05-08\",\"inspectionRating\":0,\"inspectionScore\":\"\"}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "apinrsqlwrapper.preprod.rest-let.net",
+        "path": "/v1/inspections/95"
+      },
+      "description": "Stores a Inspection",
+      "id": "b9583373-543a-40a1-9fff-d7ba7428d057",
+      "lastModified": "2018-01-25T16:25:00.057+01:00",
+      "name": "PUT /inspections/{inspectionid}",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/x-yaml"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/xml"
+        },
+        {
+          "name": "Content-Type",
+          "value": "text/xml"
+        },
+        {
+          "enabled": true,
+          "name": "Accept",
+          "value": "application/json, application/x-yaml, application/xml, text/xml"
+        },
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Basic NTJlMzlmZDctNDNiYi00Mzk4LWI0NGYtNTEyYjVkNDU0YzgwOmM0MGJlNTdkLWQzMmEtNGI1NS1iYTQ1LWQzYzhlMzk5MzdlZQ=="
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|109779155907688253084"
+      },
+      "parentId": "534362a7-9a18-480a-8989-5b705464cb48"
+    }
+  ]
+}
